@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link type = 'text/css' rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+    <meta http-equiv='Content-Type' content='text/html' charset='UTF-8'/>
+
+</head>
+<body>
+    <div class = 'app_display'>
+    <form name='mturk_form' method='POST' id='mturk_form' action='/failed_results'>
+        <fieldset>
+            <input type='hidden' value='' name='assignmentId' id='assignmentId'/>
+            <h3>Please rate this set of ideas: </h3>
+            <p>Below are ideas for alternative uses for a frisbee</p>
+            <img src="{{ url_for('static', filename='img/frisbee.jpg') }}" alt ="frisbee" >
+             <ol><div class="result">
+            {%for elem in data %}
+            <li><p  style="font-weight:bold;font-size: medium;">{{elem}}</p></li>
+                {% for question in questions %}
+                {% set outer_loop = loop %}
+                <ul>
+                 <li>{{question}} </li>
+
+                    <input type='radio'  value = 'yes' name='{{elem}}_{{loop.index}}' required>yes<br>
+                    <input type='radio' value = 'no' name='{{elem}}_{{loop.index}}' required>no<br>
+                </ul>
+                {% endfor %}
+            {% endfor %}
+             </div></ol>
+             <p><div class="buttons"> <input type='submit' id='submitButton' value='Submit' /></div></p>
+        </fieldset>
+    </form>
+    </div>
+</body>
+</html>

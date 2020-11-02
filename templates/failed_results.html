@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link type = 'text/css' rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='js/function.js')}}"></script>
+    <meta http-equiv='Content-Type' content='text/html' charset='UTF-8'/>
+
+</head>
+   <body onload="save_UserCode()">
+        <h2>Thank you for participating</h2>
+        <br>
+        <p>Please rate you experience</p>
+        <br>
+    <form method="POST" id ='final_part'>
+    <p>Overall, <u>how difficult</u> was it to select the most creative idea?</p>
+    <p style='padding-left: 20px;'> ( 1 : not at all ... 7 : very much )</p>
+    <p>
+                    <input type='hidden' id='user_passcode' name = 'user_passcode'  value = '{{user_passcode}}'>
+                <div class="slidecontainer">
+                    <input type="range" name = 'difficultyInput' min="1" max="7" value="3.5" class="slider" step = '0.5' id="difficultyInput" oninput="difficulty_rating.value = difficultyInput.value">
+                    <p>Rating: <output name ='difficulty_rating' id= 'difficulty_rating'> </output></p>
+                </div>
+    </p>
+
+    <p>Overall, <u>how certain</u> are you that you selected the most creative ideas? </p>
+    <p style='padding-left: 20px;'> ( 1 : not at all ... 7 : very much )</p>
+    <p>
+                <div class="slidecontainer">
+                    <input type="range" name ='certaintyInput' min="1" max="7" value="3.5" class="slider" step = '0.5' id="certaintyInput" oninput="certainty_rating.value = certaintyInput.value">
+                    <p> Rating : <output name ='certainty_rating' id= 'certainty_rating'> </output></p>
+                </div>
+     </p>
+        <input type="button" value="submit" onclick="get_ratings()" />
+     <p>
+        <div id="errorAlert" class="alert alert-danger" role="alert" style="display:none;"></div>
+    </p>
+    </form>
+   </body>
+</html>
+
+

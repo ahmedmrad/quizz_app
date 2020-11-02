@@ -1,0 +1,10 @@
+ideas_db:
+  host : 'enter your host link'
+  user : 'enter your user name'
+  password : 'enter your password'
+  database : 'ideas'
+password_db:
+  host : 'enter your host link'
+  user : 'enter your user name'
+  password : 'enter your password'
+  database: 'user_password'

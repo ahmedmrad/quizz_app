@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link type = 'text/css' rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
+    <meta http-equiv='Content-Type' content='text/html' charset='UTF-8'/>
+
+</head>
+<body>
+    <div class = 'index'>
+    <form name='irb_form' method=POST id='irb_form'>
+   <h2> ONLINE CONSENT TO PARTICIPATE</h2>
+    <br>
+    <p>
+        In this study, we will ask you to read a short description and answer the open-ended questions that follow.<br> You must be over 18 years of age to participate. The following information is important for your informed consent.
+    </p>
+    <p>
+        The project is titled “Testing Ground" (Protocol Number: XXXXXXXX) and is being run by Professor <br> John Smith at XXXX University. </p>
+    <p>
+        Please make sure you read and understand the questions carefully before answering. There are no right <br> or wrong answers, so feel free to report your answers openly and truthfully.
+    </p>
+    <p>
+        Participation is completely voluntary and you are free to choose whether to withdraw from the study at <br>any time without penalty or consequences of any kind. All information that you provide will be treated <br> confidentially and all questions are anonymous.
+    </p>
+    <p>
+        The study will take approximately 15 minutes to complete. You will receive instructions and a code at the end <br> of the survey to redeem your credits.
+    </p>
+    <p>
+        If you have any questions about this study, you can contact <b>username@emailserver.com</b>. Please write down this <br> contact information or print this consent document before proceeding to the study so that you can contact the researcher <br> should any questions or concerns arise during your participation in the study.
+    </p>
+    <p>
+        Moreover, if at any time you have specific questions or concerns about your rights or welfare as a study participant, <br> contact the XXXXX University Human Research Protection Office (HRPO) at <b>XXX-XXX-XXXX</b> <br> or email <b>university@emailserver.com</b>.
+    </p>
+    <p>
+        By clicking “I agree” below, you acknowledge that you understand the procedures described above and you agree <br> to participate in this study.
+    </p>
+    <br>
+    <p>
+        Thank you for your participation.
+    </p>
+    <div>
+        <input type="radio" name="consent" id = 'agree' value='agree' required>
+        <label for='agree'> I agree</label>
+    </div>
+    <div>
+        <input type="radio" name="consent" id= 'not_agree' value = 'I do not agree' required>
+        <label for='not_agree'>I do not agree</label>
+    </div>
+    <br>
+    <p>
+        <div class="buttons">
+            <input type='submit' id='submitButton' value='submit' />
+        </div>
+    </p>
+    </form>
+    </div>
+</body>
+</html>

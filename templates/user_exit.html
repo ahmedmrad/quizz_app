@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link type = 'text/css' rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="{{url_for('static', filename='js/function.js')}}"></script>
+    <meta http-equiv='Content-Type' content='text/html' charset='UTF-8'/>
+
+</head>
+   <body onload="get_Usercode()">
+        <h2>Thank you for participating</h2>
+        <br>
+        <p>Do not forget to copy the code below</p>
+        <p >Please enter the following code on the Amazon Mechanical Turk site in <br>order <u>to get credit and payment</u> for your participation:<br><br> </p>
+        <div>
+            <h4 class= 'one'id='result'> </h4>
+            <button class = 'one' onclick="copyToClipboard('#result')">Copy text</button>
+        </div>
+   </body>
+</html>

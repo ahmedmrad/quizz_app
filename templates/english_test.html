@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link type = 'text/css' rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" >
+    <meta http-equiv='Content-Type' content='text/html' charset='UTF-8'/>
+
+</head>
+<body>
+    <form method=POST name='english_test'>
+    <h2>Answer these two questions before moving forward:</h2>
+    <br>
+    <p>Please fill out these fields accordingly: </u>
+    <br/>
+    <br/>
+    </p>
+    <ul>
+        <li style="font-weight:bold;font-size: medium;">I never speak to her ___ the phone.</li>
+            <ol>
+                <li>
+                    <input type='radio'  value = 'in' name='first_question' required>in<br>
+                </li>
+                <li>
+                    <input type='radio'  value = 'on' name='first_question' required>on<br>
+                </li>
+                <li>
+                    <input type='radio'  value = 'at' name='first_question' required>at
+                </li>
+                    <br/>
+                    <br/>
+            </ol>
+        <li style="font-weight:bold;font-size: medium;">My birthday is ___ of November. </li>
+            <ol>
+               <li>
+                    <input type='radio'  value = 'eight' name='second_question' required>eight<br>
+                </li>
+                <li>
+                    <input type='radio'  value = 'the eighth' name='second_question' required>the eighth<br>
+                </li>
+                <li>
+                    <input type='radio'  value = 'eighth' name='second_question' required>eighth
+                </li>
+                    <br/>
+                    <br/>
+            </ol>
+        <li style="font-weight:bold;font-size: medium;">We have ___ milk in the fridge.  </li>
+            <ol>
+               <li>
+                    <input type='radio'  value = 'a little' name='third_question' required>a little<br>
+                </li>
+                <li>
+                    <input type='radio'  value = 'many' name='third_question' required>many<br>
+                </li>
+                <li>
+                    <input type='radio'  value = 'a few' name='third_question' required>a few
+                </li>
+                    <br/>
+                    <br/>
+            </ol>
+        <li style="font-weight:bold;font-size: medium;">I __ the shopping, but I __ the cooking today.</li>
+            <ol>
+               <li>
+                    <input type='radio'  value = 'can do, can do' name='fourth_question' required>can do, can do<br>
+                </li>
+                <li>
+                    <input type='radio'  value = 'could do, can do' name='fourth_question' required>could do, can do<br>
+                </li>
+                <li>
+                    <input type='radio'  value = 'can do, cannot do' name='fourth_question' required>can do, cannot do
+                </li>
+                    <br/>
+                    <br/>
+            </ol>
+    </ul>
+    <p>
+        <div class="buttons">
+            <input type='submit' id='submitButton' value='submit' />
+        </div>
+    </p>
+    </form>
+    </div>
+</body>
+</html>

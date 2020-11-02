@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link type = 'text/css' rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" >
+    <meta http-equiv='Content-Type' content='text/html' charset='UTF-8'/>
+
+</head>
+<body>
+    <h2>Instructions</h2>
+
+    <p>A couple weeks ago, we had participants generate <u> alternative uses for a frisbee </u></p>
+    <img src="{{ url_for('static', filename='img/frisbee.jpg') }}" alt ="frisbee" >
+    <p>Specifically, you will be given 15 Frisbee ideas, and we would like you to answer three questions concerning each idea: </p>
+    <p style='padding-left: 20px;'> 1 - Is this idea novel ? </p>
+    <p style='padding-left: 20px;'> 2 - Is this idea original ? </p>
+    <p style='padding-left: 20px;'> 3 -  Is this idea feasible ? </p>
+    <p> Your job is to <u>respond yes/no </u> to each question for every idea.</p>
+    <p>Please advance to the next page to begin.</p>
+    <div class="container">
+    <form method="post">
+        <input type="submit" name='directions' id='Continue' value="Continue">
+    </form>
+ </div>`
+</body>
+</html>
